@@ -233,8 +233,6 @@ function toggleVoice() {
   } else if (synth.paused) {
     synth.resume();
     isSpeakingPaused = false;
-  } else {
-    isSpeakingPaused = !isSpeakingPaused;
   }
 }
 
@@ -616,25 +614,11 @@ function fetchAPOD() {
     .finally(() => document.getElementById("loader").style.display = "none");
 }
 function goBackToMain() {
-  // Stop voice if speaking
-  if (synth.speaking || synth.paused) {
-    synth.cancel();
-    isSpeakingPaused = false;
-  }
-
-  // Clear APOD content
+  if (synth.speaking) synth.cancel();
   document.getElementById("apod").innerHTML = "";
-
-  // Clear date input
   document.getElementById("date").value = "";
-
-  // Hide the Back button
   document.getElementById("backBtn").style.display = "none";
-
-  // Reload a new quiz question
-  loadRandomQuestion();
 }
-
     // Quiz 
 
     const quizBank = [
