@@ -27,9 +27,6 @@ Track your daily space exploration streak across multiple visits.
 📚 **Fun Fact Generator**  
 Click to reveal a random amazing space fact—also read out loud by EVA.
 
-🎶 **Background Music**  
-Enjoy ambient cosmic background music for an enhanced experience.
-
 ---
 
 ## 🖼 Live Preview
